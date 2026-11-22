@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F6F0EA;
+    color: #25282B;
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #1C1E20;
+    font-weight: 700;
+  }
+}
+
+/* Ronas IT MedSync Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D6CCC1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8B4AE;
+}
+
+/* Custom rounded pill active shadows */
+.shadow-pill-active {
+  box-shadow: 0 4px 14px -1px rgba(30, 30, 30, 0.25);
+}
+
+.shadow-amber-glow {
+  box-shadow: 0 6px 20px -2px rgba(247, 185, 85, 0.4);
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
