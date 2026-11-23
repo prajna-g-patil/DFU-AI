@@ -10,7 +10,7 @@ import {
 } from '../types';
 import { MOCK_DOCTORS, MOCK_PATIENTS, MOCK_ASSESSMENTS, MOCK_ANALYTICS, MOCK_MODEL_INFO } from './mockData';
 
-const API_BASE = '/api';
+const API_BASE = (import.meta.env.VITE_API_BASE_URL as string) || '/api';
 
 function getAuthHeader(): Record<string, string> {
   const token = localStorage.getItem('dfu_access_token');
