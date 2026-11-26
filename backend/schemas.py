@@ -1,11 +1,11 @@
 from datetime import datetime
 from typing import Optional, List, Dict, Any
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, Field
 
 # ----------------- DOCTOR & AUTH SCHEMAS -----------------
 
 class DoctorBase(BaseModel):
-    email: EmailStr
+    email: str
     full_name: str
     specialty: str = "Podiatric Medicine & Wound Care"
     hospital: str = "St. Jude Academic Medical Center"
@@ -15,7 +15,7 @@ class DoctorCreate(DoctorBase):
     password: str
 
 class DoctorLogin(BaseModel):
-    email: EmailStr
+    email: str
     password: str
 
 class DoctorOut(DoctorBase):
